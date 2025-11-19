@@ -117,6 +117,93 @@
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
+        "artifact" : "runtime-database-cdc-processors-nar",
+        "group" : "com.snowflake.openflow.runtime",
+        "version" : "2025.11.18.22"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "PRIMARY",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "781664ed-c726-3910-8db0-cf187805754b",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "CaptureChangeSqlServer",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -496.0266864156562,
+        "y" : 247.05072814618268
+      },
+      "properties" : {
+        "Max Batch Size" : "10000",
+        "Table Changes Query Interval" : "10 sec",
+        "Fetch Size" : "100"
+      },
+      "propertyDescriptors" : {
+        "Table State Store" : {
+          "displayName" : "Table State Store",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Table State Store",
+          "sensitive" : false
+        },
+        "Max Batch Size" : {
+          "displayName" : "Max Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Batch Size",
+          "sensitive" : false
+        },
+        "Column Filter Store" : {
+          "displayName" : "Column Filter Store",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Column Filter Store",
+          "sensitive" : false
+        },
+        "Connection Pool" : {
+          "displayName" : "Connection Pool",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Connection Pool",
+          "sensitive" : false
+        },
+        "Record Writer" : {
+          "displayName" : "Record Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Record Writer",
+          "sensitive" : false
+        },
+        "Table Changes Query Interval" : {
+          "displayName" : "Table Changes Query Interval",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Table Changes Query Interval",
+          "sensitive" : false
+        },
+        "Fetch Size" : {
+          "displayName" : "Fetch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Fetch Size",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "com.snowflake.openflow.runtime.processors.database.CaptureChangeSqlServer",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
         "version" : "2025.11.18.22"
@@ -213,6 +300,6 @@
   "snapshotMetadata" : {
     "author" : "DINESH",
     "flowIdentifier" : "testflow",
-    "timestamp" : 1763541294049
+    "timestamp" : 1763541860608
   }
 }
